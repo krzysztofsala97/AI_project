@@ -5,20 +5,53 @@
  <title>Ale Odlot!</title>
  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
  <script language="JavaScript" type="text/javascript" src="Gwiazdy.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <header>
-<div id=tytuł>Ale Odlot!</div>
-<div id=podtytuł>Czyli historia podboju kosmosu</div>
+	<div id=tytuł>Ale Odlot!</div>
+	<div id=podtytuł>Czyli historia podboju kosmosu</div>
 </header>
-
 <canvas id="space"></canvas>
+<div class=kafelek><a href="kalendarium.htm">Kalendarium</a></div></div>
+<div class=kafelek><a href="Pojecia.htm">Ważne pojęcia</a></div>
+<div class=kafelek><a href="Gra.htm">Coś na rozluźnienie</a></div>
+
+
+<div class="w3-content w3-section" style="width:100%;">
+  <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg">
+  <img class="mySlides" src="http://www.nasa.gov/sites/default/files/images/112671main_image_feature_305_jwfull.jpg">
+  <img class="mySlides" src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3OTM5NjM0NzI5Mzk2MTc0/apollo-11-hero.jpg">
+  <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/STS-134_International_Space_Station_after_undocking.jpg">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 <footer>
-<div id="autor">
-Strona stworzona przez Krzysztofa Sala w 2019r.
-</div>
+	<div id="social_media">	
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-google"></a>
+	</div>
+	<div id="autor">
+		Strona stworzona przez Krzysztofa Sala w 2019r.
+	</div>			
 </footer>
 </body>
 </html>
